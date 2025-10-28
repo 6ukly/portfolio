@@ -38,14 +38,14 @@ export function Hero() {
   const defaultInfo = {
     greeting: "안녕하세요",
     name: "이영욱(수정중)",
-    title: "단국대 학생입니다",
+    title: "단국대학교 부동산학과",
     description: "프롭테크 기술로 부동산 시장을 분석합니다.",
     profileImage: "/uploads/hero-profile-1761477237286.png",
     backgroundImage: "",
     backgroundVideo: "",
     backgroundOpacity: 0.1,
     projectButton: "프로젝트 보기",
-    background: {"image":"","video":"","color":"","opacity":0.1}
+    background: {"image":"","video":"","color":"#7ad6c4","opacity":0.1}
   }
 
   const [backgroundData, setBackgroundData] = useState<{ image: string; video: string; color: string; opacity: number } | null>(null)

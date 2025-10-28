@@ -34,10 +34,10 @@ export function Contact() {
   
   // 기본 데이터
   const defaultInfo = {
-    name: "당신의 이름",
-    title: "직책/직무",
+    name: "이영욱",
+    title: "",
     company: "",
-    experience: "3년 경력",
+    experience: "",
     phone: "010-6354-5077",
     email: "hwayang06@gmail.com",
     website: "",
