@@ -37,7 +37,7 @@ export function Hero() {
   
   const defaultInfo = {
     greeting: "안녕하세요",
-    name: "이영욱(수정중)",
+    name: "이영욱",
     title: "단국대학교 부동산학과",
     description: "프롭테크 기술로 부동산 시장을 분석합니다.",
     profileImage: "/uploads/hero-profile-1761477237286.png",
