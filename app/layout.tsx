@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { InlineEditorProvider } from "@/contexts/inline-editor-context"
 import { SiteTitle } from "@/components/site-title"
 import { getMetadata } from "@/lib/metadata"
-import "../globals.css"
+import "./globals.css"
 
 const metadataInfo = getMetadata()
 
