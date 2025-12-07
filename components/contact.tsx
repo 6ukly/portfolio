@@ -45,7 +45,7 @@ export function Contact() {
     workTime: "평일 09:00 - 18:00",
     responseTime: "24시간 이내 응답",
     sectionTitle: "연락처",
-    sectionSubtitle: "",
+    sectionSubtitle: " ",
     qrTitle: "QR 코드로 연락처 저장",
     qrSubtitle: "스캔하면 연락처가 자동으로 저장됩니다",
     bottomMessage: "함께 성장하는 파트너가 되겠습니다.",

@@ -14,7 +14,7 @@ export function Projects() {
   // 기본 데이터
   const defaultInfo = {
     title: "프로젝트",
-    subtitle: "",
+    subtitle: " ",
     initialDisplay: 9,
     loadMoreCount: 3,
     background: {"image":"","video":"","color":"#8ce6e6","opacity":0.3},
