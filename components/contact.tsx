@@ -45,14 +45,14 @@ export function Contact() {
     workTime: "평일 09:00 - 18:00",
     responseTime: "24시간 이내 응답",
     sectionTitle: "연락처",
-    sectionSubtitle: "프로젝트 문의나 협업 제안을 기다리고 있습니다. 편하신 방법으로 연락주세요!",
+    sectionSubtitle: "",
     qrTitle: "QR 코드로 연락처 저장",
     qrSubtitle: "스캔하면 연락처가 자동으로 저장됩니다",
     bottomMessage: "함께 성장하는 파트너가 되겠습니다.",
     bottomSubMessage: "고객님의 성공적인 프로젝트를 위해 최선을 다하겠습니다.",
     qrContent: ["name","phone","email","location","website"],
     profileEmoji: "👤",
-    background: {"image":"","video":"","color":"","opacity":0.1}
+    background: {"image":"","video":"","color":"#8ce6e6","opacity":0.4}
   }
   
   // 소셜 링크 기본값 (배열 형태로 변경)

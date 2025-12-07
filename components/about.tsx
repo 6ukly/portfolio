@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import { useState, useEffect } from "react"
+import { TimelineModal } from "./timeline-modal"
 import { Card, CardContent } from "@/components/ui/card"
 import { Briefcase, GraduationCap, Award, Heart, Coffee, Book, Plus, X, Settings, Calendar, Building, User, Trophy, Star, Lightbulb, Target, Rocket, Shield, Sparkles, Code, Database, Palette, Megaphone, BarChart3, LineChart, PieChart, Activity, Brain, Cpu, Layers, Package, Server, Smartphone, Monitor, Wifi, Cloud, Lock, Key, Eye, Search, Filter, Edit, FileText, FolderOpen, GitBranch, Hash, Inbox, Send, MessageSquare, Music, Camera, Video, Mic, Volume2, Headphones, Radio, Zap, Globe, Users, TrendingUp, BookOpen, MapPin, Clock, CheckCircle, AlertCircle, Home, School } from "lucide-react"
 import { EditableText } from "@/components/editable/editable-text"
@@ -98,19 +99,20 @@ export function About() {
   const defaultInfo = {
     title: "소개",
     subtitle: "당신의 전문성과 열정을 소개해주세요.",
-    background: {"image":"","video":"","color":"","opacity":0.1},
-    experienceCards: [{"icon":"briefcase","title":"회사명","period":"2020 - 현재","description":"직무 및 역할"},{"icon":"graduation","title":"단국대학교","period":"2019 - 현재","description":"부동산학과"},{"icon":"award","title":"자격증/수상","period":"2022 - 공인중개사","description":"설명을 입력하세요"},{"icon":"briefcase","title":"목표","period":"2025 - 감정평가사 1차","description":""}],
-    skills: [{"icon":"code","title":"프론트엔드 개발","description":"React, TypeScript, Next.js를 활용한 모던 웹 개발"},{"icon":"database","title":"백엔드 개발","description":"Node.js, Python, 데이터베이스 설계 및 구현"},{"icon":"palette","title":"UI/UX 디자인","description":"사용자 중심의 인터페이스 디자인"}],
-    storyTitle: "나의 이야기",
-    story: ["저는 기술을 통해 사람들의 삶을 더 편리하고 의미 있게 만드는 일에 열정을 가지고 있습니다.","다양한 프로젝트를 통해 문제 해결 능력과 창의적인 사고를 키워왔으며, 팀원들과의 협업을 통해 함께 성장하는 가치를 배웠습니다.","앞으로도 지속적인 학습과 도전을 통해 더 나은 개발자가 되기 위해 노력하겠습니다."],
-    storyImage: "",
-    hobbies: ["📚 독서","☕ 카페 투어","🎨 전시회 관람","✈️ 여행"]
+    background: {"image":"","video":"","color":"#8ce6e6","opacity":0.2},
+    experienceCards: [{"icon":"graduation","title":"단국대학교 죽전캠퍼스","period":"도시계획부동산학부 부동산학전공","description":"2019.03~2027.02"},{"icon":"award","title":"자격증/수상","period":"공인중개사(2022년도 33회)","description":"한국산업인력공단"},{"icon":"target","title":"목표","period":"감정평가사 자격증 준비","description":""},{"icon":"building","title":"직무경험","period":"인성엔지니어링 기술사사무소[법원감정] (2023.01 ~ 2023.04) [단기]","description":"신축/준신축 아파트 하자 진단 실무 및 건축물 결함 리스크 관리 지원 / 누수 및 시공 불량에 대한 현장 정밀 진단 및 원인 조사 / 건축물 구조 안전진단 실무 보조"},{"icon":"building","title":"직무경험","period":"앱티브코리아[Project Manager Team] (2023.11 ~ 2024.08)","description":"글로벌 자동차 부품 제조 기업의 공급망 관리(SCM) 프로세스 지원 / 글로벌 무역 및 통관 관리 / 사내 재고 및 물류 운영 최적화 / 전략적 협력사 관리(SRM)"},{"icon":"building","title":"직무경험","period":"코리아런드리[CRM & Sales Team](2024.09 ~ 현재)","description":"점주CS 및 영업관리 / 전국 셀프빨래방 데이터베이스 기반의 위치 기반 O2O 서비스 기획, 제작 참여(현재진행중) / 전략적 제휴 및 시장 조사"}],
+    skills: [{"icon":"code","title":"[Python, R 등]을 활용한 데이터 기반 가치 예측","description":"감정평가 전문 지식에 AI 기반 데이터 분석 기술을 접목하여 부동산 시장을 다각도로 분석합니다. [Python, R] 등 실질적인 분석 플랫폼을 능숙하게 활용하여 미래 시장 변화를 예측하고, 창업 아이템의 핵심인 개인 맞춤형 최적화 솔루션을 설계 및 구현합니다."},{"icon":"barChart","title":"시계열 분석 및 실증 모형을 활용한 금융 리스크 분석","description":"감정평가 전문 지식과 부동산 금융 공학적 관점을 융합하여 시장을 분석합니다. 시계열 분석(Time Series Analysis)을 활용하여 부동산 가격 변동 및 금리 추이를 예측하고, 나아가 블랙-숄즈 모형(Black-Scholes Model), 몬테카를로 시뮬레이션(Monte Carlo Simulation) 등의 실증 모형을 능숙하게 적용하여 PF(프로젝트 파이낸싱) 리스크, 옵션 가치 평가 등 복잡한 금융 문제를 정량적으로 분석하고 최적의 솔루션을 제시합니다."},{"icon":"users","title":"사무 실무 경험을 통한 책임감 및 협업 태세 확립","description":"사무 경험을 통해 문서 관리, 업무 프로세스 이해, 기한 준수 등 조직 운영에 필수적인 사무 실무 능력을 숙련했습니다. 또한, 부동산 금융 프로젝트 및 프롭테크 앱 기획(형과의 협업)을 병행하며 다양한 이해관계자와 원활히 소통하고 의견을 조율하는 능력을 갖추었습니다. 이는 어떤 환경에서도 책임감 있는 자세로 팀워크에 기여하며 공동의 목표를 달성할 수 있는 기반이 됩니다."}],
+    storyTitle: "STORY",
+    story: ["1. '예비 감정평가사로서 부동산의 가치를 읽다.' / \n저는 단국대학교 부동산학과에서 부동산 가치 평가 및 분석에 대한 전문 지식을 깊이 있게 탐구하고 있습니다. 현재 감정평가사 자격시험을 준비하며, 단순한 학문적 지식을 넘어 법규와 실무 원리를 체계적으로 습득하고 있습니다. 특히, 4학년을 앞두고 진행한 다양한 프로젝트들은 저를 공정하고 합리적인 가치 판단을 수행하는 예비 전문가로 성장시키는 밑거름이 되었습니다.","2. '기술 융합을 통한 시장 혁신: 프롭테크를 향한 비전' / \n저는 기술을 통해 사람들의 삶을 더 편리하고 의미 있게 만드는 일'에 강한 열정을 가지고 있습니다. 현재 형과 함께 기획 중인 개인 맞춤형 주택 구매 자동화 서비스(앱) 창업 아이템은 이러한 비전의 구체적인 결과물입니다. 복잡하고 불투명한 부동산 시장에서 빅데이터 분석 및 프롭테크 기술을 융합하여, 사용자들이 가장 합리적인 주택 구매 결정을 내릴 수 있도록 돕는 혁신적인 솔루션을 제시하고자 합니다.","3. '문제 해결 능력과 지속적인 성장' / \nPF 금융구조 분석, DSR 규제 영향 분석, 그리고 빅데이터 활용 주택구매 시뮬레이션 등 다양한 프로젝트 경험을 통해 실무적인 문제 해결 능력과 창의적인 사고를 키워왔습니다. 또한, 사무 아르바이트를 병행하며 얻은 책임감과 성실함은 팀워크와 협업의 가치를 이해하고 어떤 환경에서든 기여할 수 있는 능력을 배양하는 데 큰 도움이 되었습니다. 앞으로도 지속적인 학습과 도전을 통해 부동산 가치 평가와 기술 혁신을 선도하는 전문가로 거듭나겠습니다."],
+    storyImage: "/uploads/about-image-1765082809513.png",
+    hobbies: ["✈️ 여행","🎬 영화 감상","📸 사진"]
   }
   
   const [aboutInfo, setAboutInfo] = useState(defaultInfo)
   const [backgroundData, setBackgroundData] = useState(
     defaultInfo.background
   )
+  const [showTimelineModal, setShowTimelineModal] = useState(false)
   const [showCareerModal, setShowCareerModal] = useState(false)
   const [showSkillModal, setShowSkillModal] = useState(false)
   const [showHobbyModal, setShowHobbyModal] = useState(false)
@@ -273,13 +275,28 @@ export function About() {
                             storageKey={`about-experience-${index}-period`}
                           />
                         </p>
-                        <p className="text-sm text-muted-foreground">
-                          <EditableText
-                            value={card.description}
-                            onChange={(value) => updateExperienceCard(index, 'description', value)}
-                            storageKey={`about-experience-${index}-description`}
-                          />
-                        </p>
+                      {card.title.includes('목표') ? (
+    <div className="mt-3">
+        {/* 목표 카드는 텍스트 입력란을 출력하지 않고 버튼만 출력합니다. */}
+        
+        <button
+            onClick={() => setShowTimelineModal(true)} 
+            className="px-4 py-2 bg-indigo-600 text-white text-sm rounded-lg hover:bg-indigo-700 transition-colors shadow-md"
+        >
+            🔽 계획 펼치기
+        </button>
+    </div>
+) : (
+    // 목표 카드가 아닐 경우 기존 텍스트 입력란 출력 방식 유지
+    <p className="text-sm text-muted-foreground">
+        <EditableText 
+            value={card.description}
+            onChange={(value) => updateExperienceCard(index, 'description', value)}
+            storageKey={`about-experience-${index}-description`}
+            multiline
+        />
+    </p>
+)}
                       </div>
                     </div>
                   </CardContent>
@@ -799,6 +816,9 @@ export function About() {
             </div>
           </div>
         </div>
+      )}
+      {showTimelineModal && (
+        <TimelineModal onClose={() => setShowTimelineModal(false)} />
       )}
     </EditableBackground>
   )

@@ -33,19 +33,19 @@ export function Hero() {
   const { getData, saveData, isEditMode, saveToFile, saveFieldToFile } = useInlineEditor()
   
   // 초기 데이터 - 배열 형태로 변경
-  const defaultSocialLinks = [{"name":"Instagram","icon":"instagram","url":"https://instagram.com/username"},{"name":"YouTube","icon":"youtube","url":"https://youtube.com/@username"}]
+  const defaultSocialLinks = [{"name":"Instagram","icon":"instagram","url":"https://instagram.com/6ukly"},{"name":"새 링크","icon":"mail","url":"hwayang06@gmail.com"}]
   
   const defaultInfo = {
-    greeting: "안녕하세요",
+    greeting: "Certified Public Appraiser",
     name: "이영욱",
-    title: "단국대학교 부동산학과",
-    description: "프롭테크 기술로 부동산 시장을 분석합니다.",
-    profileImage: "/uploads/hero-profile-1761477237286.png",
+    title: "예비 감정평가사",
+    description: "부동산 가치 평가에 대한 깊은 이해를 바탕으로, 공정하고 합리적인 가치 판단을 수행합니다",
+    profileImage: "/uploads/hero-profile-1764841521498.png",
     backgroundImage: "",
     backgroundVideo: "",
     backgroundOpacity: 0.1,
     projectButton: "프로젝트 보기",
-    background: {"image":"","video":"","color":"#7ad6c4","opacity":0.1}
+    background: {"image":"/uploads/hero-background-1764840946061.png","video":"","color":"","opacity":1}
   }
 
   const [backgroundData, setBackgroundData] = useState<{ image: string; video: string; color: string; opacity: number } | null>(null)
@@ -188,14 +188,14 @@ export function Hero() {
                   storageKey="hero-name"
                 />
               </h1>
-              <p className="text-2xl mb-4 text-muted-foreground">
+              <p className="text-2xl mb-4 text-gray-800">
                 <EditableText
                   value={heroInfo.title}
                   onChange={(value) => updateHeroInfo('title', value)}
                   storageKey="hero-title"
                 />
               </p>
-              <p className="text-lg mb-8 text-muted-foreground">
+              <p className="text-lg mb-8 text-gray-800">
                 <EditableText
                   value={heroInfo.description}
                   onChange={(value) => updateHeroInfo('description', value)}

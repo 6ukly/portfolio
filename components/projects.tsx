@@ -14,16 +14,11 @@ export function Projects() {
   // 기본 데이터
   const defaultInfo = {
     title: "프로젝트",
-    subtitle: "프로젝트",
-    initialDisplay: 6,
+    subtitle: "",
+    initialDisplay: 9,
     loadMoreCount: 3,
-    background: {
-      image: "",
-      video: "",
-      color: "",
-      opacity: 0.1
-    },
-    projects: [] as Array<{ image: string; video?: string; title: string; description: string }>
+    background: {"image":"","video":"","color":"#8ce6e6","opacity":0.3},
+    projects: [{"image":"/uploads/project-0-1765077408676.jpg","video":"","title":"알파돔시티 프로젝트의 PF 금융구조 분석","description":"복잡한 개발 프로젝트의 자금 조달 구조(PF)를 심층 분석하고, 사업 안정성을 평가한 보고서입니다."},{"image":"/uploads/project-1765077670452-1765077670473.jpg","video":"","title":"센터필드 프로젝트의 금융 구조 및 리스크 대응 전략","description":"대형 상업용 부동산의 금융 구조를 이해하고, 잠재적 리스크에 대한 실효성 있는 대응 전략을 제시했습니다."},{"image":"/uploads/project-2-1765077839306.jpg","video":"","title":"DSR 규제가 주택금융시장에 미친 단기적 장기적 영향 분석","description":"주택담보대출의 건전성 지표인 DSR 규제 강화가 주택시장에 미치는 구조적 변화와 장기적 영향을 거시적으로 분석했습니다."},{"image":"/uploads/project-1765077863591-1765077863618.jpg","video":"","title":"금리 변화가 주택시장에 미치는 영향분석(COVID-19 전 후)","description":"기준금리 변화(COVID-19 전후)에 따른 주택 매매 및 전월세 시장의 변화 양상을 데이터 기반으로 비교 분석했습니다"},{"image":"/uploads/project-1765078034984-1765078036268.jpg","video":"","title":"PF 부실화가 금융기관의 건전성에 미치는 영향 분석","description":"시중은행과 저축은행의 비교를 통해 부동산 PF의 부실 위험이 금융 시스템 전반의 건전성에 미치는 파급 효과와 연관성을 분석했습니다."},{"image":"/uploads/project-1765078349602-1765078349966.jpg","video":"","title":"빅데이터를 활용한 주택구매 시뮬레이션","description":"예비 감정평가사로서의 지식과 프롭테크 아이템을 접목해, 개인 맞춤형 주택 구매 시나리오를 시뮬레이션했습니다."},{"image":"/uploads/project-1765078663662-1765078664437.jpg","video":"","title":"신탁구조 및 신탁원부의 분석(역삼동790-9번지)","description":"신탁원부의 실물 분석을  기반으로 하여 사업 진행 방식과 참여 주체별 역할 및 수익 배분 구조를 도식화하여 이해도를 높였습니다."},{"image":"/uploads/project-1765079678078-1765079682130.jpg","video":"","title":"부동산자산관리(현금흐름 분석을 통한 매입타당성 판단)","description":"부동산 매입 시 현금흐름(Cash Flow)을 분석하여 투자 타당성을 면밀히 검토하고 최적의 매입가를 산정했습니다."},{"image":"/uploads/project-1765080151984-1765080153391.jpg","video":"","title":"강남보금자리주택 분석 및 시사점 연구","description":"특정 지구 내 주택의 특성과 시장 환경을 종합적으로 조사하여, 대상 주택의 적정 가치 및 시장에서의 경쟁력을 평가했습니다."}] as Array<{ image: string; video?: string; title: string; description: string }>
   }
 
   const [projectsInfo, setProjectsInfo] = useState(defaultInfo)
